@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Over Rice - Online Order Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="truck-header">
+    <img class="truck-photo" src="images/IMG_0108.jpg" alt="Yellow Over Rice food truck with colorful menu signs">
+    <div class="truck-info">
+      <h1>Over Rice</h1>
+      <p class="truck-description">A halal food truck serving big, filling plates of seasoned meat over rice, topped with fresh salad and house sauces. Cooked fresh when you order.</p>
+      <p><strong>Type of food:</strong> Halal food</p>
+      <p><strong>Service area:</strong> Drexel University area, Philadelphia</p>
+    </div>
+  </header>
+
+  <main>
+    <h2>Order Online for Pickup</h2>
+    <p class="instructions">Fill out each section below, then press Place Order. Fields marked (required) must be completed. Prices are shown next to each item.</p>
+
+    <form class="order-form" action="#" method="post">
+
+      <fieldset>
+        <legend>1. Your information</legend>
+        <div class="field">
+          <label for="customer-name">Customer name (required)</label>
+          <input type="text" id="customer-name" name="customer-name" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Email address (required)</label>
+          <input type="text" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="phone">Phone number (required)</label>
+          <input type="text" id="phone" name="phone" required autocomplete="tel">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Choose your food (select one or more)</legend>
+        <div class="menu-item">
+          <input type="checkbox" id="item-chicken" name="menu" value="chicken">
+          <label for="item-chicken"><span class="item-name">Chicken Over Rice</span> <span class="price">$9.00</span>
+            <span class="item-desc">Grilled halal chicken over yellow rice with lettuce, tomato, and white sauce.</span></label>
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="item-lamb" name="menu" value="lamb">
+          <label for="item-lamb"><span class="item-name">Lamb Over Rice</span> <span class="price">$10.00</span>
+            <span class="item-desc">Seasoned lamb over rice with fresh salad and your choice of sauce.</span></label>
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="item-combo" name="menu" value="combo">
+          <label for="item-combo"><span class="item-name">Combo Over Rice</span> <span class="price">$11.00</span>
+            <span class="item-desc">Chicken and lamb together over rice with salad and pita.</span></label>
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="item-gyro" name="menu" value="gyro">
+          <label for="item-gyro"><span class="item-name">Chicken Gyro</span> <span class="price">$8.00</span>
+            <span class="item-desc">Sliced chicken, lettuce, tomato, and white sauce wrapped in warm pita.</span></label>
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="item-falafel" name="menu" value="falafel">
+          <label for="item-falafel"><span class="item-name">Falafel Platter</span> <span class="price">$8.50</span>
+            <span class="item-desc">Crispy falafel over rice with salad, hummus, and tahini sauce.</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Customize your order</legend>
+
+        <fieldset class="inner-group">
+          <legend>Order size</legend>
+          <div class="choice">
+            <input type="radio" id="size-regular" name="size" value="regular" checked>
+            <label for="size-regular">Regular (standard platter)</label>
+          </div>
+          <div class="choice">
+            <input type="radio" id="size-large" name="size" value="large">
+            <label for="size-large">Large (extra rice and extra meat, +$3.00)</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="inner-group">
+          <legend>Extras (optional)</legend>
+          <div class="choice">
+            <input type="checkbox" id="extra-guac" name="extras" value="white-sauce">
+            <label for="extra-guac">Extra white sauce (+$0.50)</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" id="extra-cheese" name="extras" value="extra-meat">
+            <label for="extra-cheese">Extra meat (+$3.00)</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" id="extra-jalapeno" name="extras" value="pita">
+            <label for="extra-jalapeno">Side of pita bread (+$1.00)</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" id="extra-sourcream" name="extras" value="hot-sauce">
+            <label for="extra-sourcream">Extra hot sauce (free)</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="drink">Drink choice</label>
+          <select id="drink" name="drink">
+            <option value="none">No drink</option>
+            <option value="water">Bottled water</option>
+            <option value="soda">Canned soda</option>
+            <option value="lemonade">Lemonade</option>
+            <option value="mango">Mango juice</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="special">Special instructions (optional)</label>
+          <textarea id="special" name="special" rows="4" placeholder="Example: no onions, sauce on the side"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>4. Pickup information</legend>
+        <div class="field">
+          <label for="pickup-time">Preferred pickup date and time (required)</label>
+          <input type="text" id="pickup-time" name="pickup-time" required placeholder="Example: Friday 12:30 PM">
+        </div>
+        <div class="field">
+          <label for="pickup-name">Pickup name, if different from customer name</label>
+          <input type="text" id="pickup-name" name="pickup-name">
+        </div>
+        <div class="field">
+          <label for="pickup-notes">Additional pickup instructions (optional)</label>
+          <textarea id="pickup-notes" name="pickup-notes" rows="3" placeholder="Example: I will be waiting near the truck window"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="buttons">
+        <button type="submit" class="btn-submit">Place Order</button>
+        <button type="reset" class="btn-reset">Reset Form</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>Over Rice &copy; 2026. Practice page for CIS 130.</p>
+  </footer>
+</body>
+</html>
