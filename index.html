@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Over Rice - Online Order Form</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="truck-header">
@@ -21,7 +21,7 @@
     <h2>Order Online for Pickup</h2>
     <p class="instructions">Fill out each section below, then press Place Order. Fields marked (required) must be completed. Prices are shown next to each item.</p>
 
-    <form class="order-form" action="#" method="post">
+    <form class="order-form" action="https://formspree.io/f/mkjrjzlj" method="POST>
 
       <fieldset>
         <legend>1. Your information</legend>
@@ -31,11 +31,11 @@
         </div>
         <div class="field">
           <label for="email">Email address (required)</label>
-          <input type="text" id="email" name="email" required autocomplete="email">
+          <input type="email" id="email" name="email" required autocomplete="email">
         </div>
         <div class="field">
           <label for="phone">Phone number (required)</label>
-          <input type="text" id="phone" name="phone" required autocomplete="tel">
+          <input type="tel" id="phone" name="phone" required autocomplete="tel">
         </div>
       </fieldset>
 
@@ -123,9 +123,13 @@
       <fieldset>
         <legend>4. Pickup information</legend>
         <div class="field">
-          <label for="pickup-time">Preferred pickup date and time (required)</label>
-          <input type="text" id="pickup-time" name="pickup-time" required placeholder="Example: Friday 12:30 PM">
-        </div>
+  <label for="pickup-date">Pickup date (required)</label>
+  <input type="date" id="pickup-date" name="pickup-date" required>
+</div>
+<div class="field">
+  <label for="pickup-time">Pickup time (required)</label>
+  <input type="time" id="pickup-time" name="pickup-time" required>
+</div>
         <div class="field">
           <label for="pickup-name">Pickup name, if different from customer name</label>
           <input type="text" id="pickup-name" name="pickup-name">
